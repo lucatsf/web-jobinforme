@@ -1,3 +1,4 @@
+import { SignInButton } from '../SignInButton';
 import styles from './styles.module.scss';
 
 export function Header() {
@@ -7,9 +8,11 @@ export function Header() {
                 <img src="/images/logo.svg" alt="job in for me"/>
 
                 <nav>
-                    <a>Home</a>
+                    <a className={styles.active}>Home</a>
                     <a>Vagas</a>
                 </nav>
+
+                <SignInButton />
             </div>
         </header>
     )
