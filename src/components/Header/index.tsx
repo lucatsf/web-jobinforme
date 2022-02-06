@@ -5,11 +5,14 @@ export function Header() {
     return(
         <header className={styles.headerContainer}>
             <div className={styles.headerContent}>
-                <img src="/images/logo.svg" alt="job in for me"/>
+                <a href='/'>
+                    <img src="/images/logo.svg" alt="job in for me"/>
+
+                </a>
 
                 <nav>
-                    <a className={styles.active}>Home</a>
-                    <a>Vagas</a>
+                    <a href='/' className={styles.active}>Home</a>
+                    <a href='/jobs'>Vagas</a>
                 </nav>
 
                 <SignInButton />
