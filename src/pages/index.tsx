@@ -1,7 +1,12 @@
 import Head from 'next/head'
+import { useContext } from 'react'
+import SearchJob from '../components/SearchJob'
+import { SendJob } from '../components/SendJob'
+import { AuthContext } from '../context/auth'
 import styles from './home.module.scss'
 
 export default function Home() {
+  const { user } = useContext(AuthContext)
   return (
     <>
       <Head>
@@ -9,7 +14,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       
-      <main className={styles.contentContainer}>
+      {!user ? (
+        <main className={styles.contentContainer}>
         <section className={styles.hero}>
           <span>Encontre o emprego dos seus sonhos</span>
           <h1>Encontre sua vaga em uma empresa ideal para <span>Você!</span></h1>
@@ -24,6 +30,10 @@ export default function Home() {
           alt="Woman looking for a job in front of an information board"
         />
       </main>
+      ) : (
+        <main className={styles.contentDash}>
+        </main>
+      )}
     </>
   )
 }

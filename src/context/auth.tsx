@@ -46,7 +46,6 @@ export function AuthProvider(props:AuthProvider) {
     const { token, user } = response.data;
 
     if (typeof token != undefined && token != null) {
-      console.log('nn',token)
       localStorage.setItem('@jobinforme:token', token);
 
       api.defaults.headers.common.authorization = `Bearer ${token}`;
@@ -58,13 +57,13 @@ export function AuthProvider(props:AuthProvider) {
   function signOut() {
     localStorage.removeItem('@jobinforme:token');
     setUser(null);
+    window.location.href = '/';
   }
 
   useEffect(() => {
     const token = localStorage.getItem('@jobinforme:token')
 
     if(token) {
-      console.log('token', token)
       api.defaults.headers.common.authorization = `Bearer ${token}`;
 
       api.get('user/profile').then(response => {

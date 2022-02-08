@@ -16,7 +16,7 @@ export function SignInButton() {
 
     return user ? (
         <button type="button" onClick={signOut} className={styles.signInButton}>
-            <img src={user.picture_url} />
+            <img src={ user.picture_url } />
             { user.name }
             <FiX color="#737380" className={styles.closeIcon} />
         </button>

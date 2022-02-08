@@ -7,7 +7,6 @@ export function Header() {
             <div className={styles.headerContent}>
                 <a href='/'>
                     <img src="/images/logo.svg" alt="job in for me"/>
-
                 </a>
 
                 <nav>

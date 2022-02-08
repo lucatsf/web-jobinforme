@@ -1,0 +1,36 @@
+.searchWrapper {
+  padding: 0;
+  place-self: flex-start;
+  border-radius: 2rem;
+  position: fixed;
+
+  max-width: 1120px;
+  margin: 18 auto;
+  padding: 0 1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  background-color: #1b1b1f;
+
+  .searcJobInput {
+        background: transparent;
+        border: 0;
+        padding: 1.5rem;
+        width: 600px;
+        height: 2rem;
+        color: #e1e1e6;
+        font-size: 16px;
+        line-height: 24px;
+
+        &:focus {
+            outline: none;
+        }
+
+        &::placeholder {
+            color: #e1e1e6;
+        }
+    }
+}
+
