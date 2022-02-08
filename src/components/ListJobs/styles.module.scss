@@ -1,0 +1,30 @@
+.orderList {
+    position: absolute;
+    max-width: 700px;
+    list-style-type: none;
+}
+
+.cardListJobs {
+    
+    border-radius: 1rem;
+    background:  #1b1b1f;
+    border: 0;
+
+    margin-top: 1rem;
+    padding: 1rem 1.5rem;
+}
+
+.nameCompany{
+    font-size: 0.9rem;
+    font-style: italic;
+    font-weight: normal;
+    margin: 2px 0;
+    color: #c4c4c4;
+}
+
+.content{
+    margin: 5px 0;
+    font-size: 1rem;
+    color: #c4c4c4;
+    text-align: justify;
+}

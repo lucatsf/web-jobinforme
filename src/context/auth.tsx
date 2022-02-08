@@ -68,7 +68,7 @@ export function AuthProvider(props:AuthProvider) {
 
       api.get('user/profile').then(response => {
         const { user } = response.data;
-        console.log('user', user)
+
         setUser(user)
       })
 
